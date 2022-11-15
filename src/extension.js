@@ -51,15 +51,7 @@ const DataProvider = require("./dataProvider.js");
 }
 
 
-
-
-
-
-
-
 async function activate(context) {
-
-
 
   // Adding files to our extension dynamically
 
