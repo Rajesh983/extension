@@ -1,0 +1,86 @@
+{
+  "name": "alpine983",
+  "displayName": "Alpine",
+  "publisher": "Rajesh983",
+  "description": "",
+  "version": "1.73.0",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Other"
+  ],
+
+  "extensionDependencies": [
+    "vscode.git"
+  ],
+
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
+
+  "contributes": {
+    "commands": [
+      {
+        "command": "alpine.search",
+        "title": "alpine-search"
+      },
+      {
+        "command": "invoke-api",
+        "title": "Invoke API"
+      }
+    ],
+
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "Sample-Product",
+          "title": "8800-Product",
+          "icon": "./img/Frame 275.png"
+        }
+      ]
+    },
+    "views": {
+      "Sample-Product": [
+        {
+          "id": "exampleTreeview",
+          "name": "",
+          "icon": "./img/Frame 275.png"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "Sample-Product",
+        "contents": "%view.workbench.scm%"
+      },
+      {
+        "view": "Sample-Product-1",
+        "contents": "Testing"
+      }
+    ]
+
+
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.73.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.26.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "axios": "^1.1.3",
+    "form-data": "^4.0.0"
+  }
+}
