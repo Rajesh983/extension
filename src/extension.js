@@ -289,7 +289,7 @@ table, th, td {
   </body>
   </html>`;
 }
-
+//
 module.exports = {
   activate,
   deactivate,
